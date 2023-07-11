@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header';
 import Hero from './Components/Hero'
@@ -16,8 +15,9 @@ function App() {
   //now I will write the stuff as the components that I have decided
   //ok so first of all I made empty file for all components and then imported them into App.js
   //then I looked at the plan and wrote the most basic html in each component, components like card that needed to be dynamic, well I left those components empty so that I may work on them later, for now the html is like 90% done
+  //EDIT: for now I am adding nothing dyanimc, I am going to assume that number of card and reviews is constant, afterall I need to finish this project today itself 😬
   //now I will add the meta and open graph tags in index.html
-  
+  //go to specials.js to learn how to import images into components
   return (
     <>
       <Header/>

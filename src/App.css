@@ -1,38 +1,255 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+img{
+  max-width: 500px;
+  max-height: 500px;
+}
+/*
+ this is the css for nav bar (header component)
+ first I make header into a flex box in this vertically (cross axis) align is handled by align-items and horizontal align by justify contents
+ list of links is independent flex box, with a gap of 10px
+*/
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 0px 126.5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: #333;
+  padding: 5px 10px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  font-family: "Karla", sans-serif;
+  font-weight: 800; /* Extrabold font weight */
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a:hover {
+  background-color: #ddd;
+}
+header img {
+  margin-left: 40px;
+  width: 200px;
+  height: 57px;
+  /* border: 2px solid red; */
+}
+
+
+/* this is styling for the hero component */
+.hero {
+  margin: 0px 126.5px;
+  display: flex;
+  align-items: top;
+  /* border: 2px solid red; */
+  background-color: #f4ce14;
+  height: 457px;
+
+}
+
+.hero img {
+  width: 404px;
+  height: 457px;
+  margin-right: 20px;
+  margin-top: 20px;
+  border-radius: 16px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  word-wrap: break-word;
+  /* border: 2px solid red; */
+  width: 422px;
+  height: 430px;
+  margin-left:272px;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.content h1 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500; /* Medium font weight */
+  font-size: 64px;
+}
+
+.content h2 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400; /* Regular font weight */
+  font-size: 40px;
+}
+
+.content p {
+    font-family: 'Karla', sans-serif;
+    font-weight: 500; /* Medium font weight */
+    font-size: 18px;
+  
+}
+
+/*sends button to the bottom of flex box*/
+.content button {
+  margin-top: auto;
+  width: 200px;
+  height: 60px;
+  border-radius: 16px;
+  background-color: #495e57;
+  color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border: none; /* Remove border to enhance the raised effect */
+  font-family: "Karla", sans-serif;
+  font-weight: 500; /* Medium font weight */
+  font-size: 18px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition effect */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add box shadow for raised effect */
+}
+
+.content button:hover {
+  background-color: #30413d;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Adjust box shadow on hover */
+}
+
+
+/*
+this css is for the specials section
+*/
+.specials {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  padding-top: 30px;
+  flex-direction: column;
+  margin: 0px 126.5px;
+
+  
+}
+
+.specials .title{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:10px;
+  margin:10px;
+  font-family: 'Markazi Text', serif;
+  font-weight: 500; /* Medium font weight */
+  font-size: 64px;
+}
+
+.cardContainer{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+
+}
+
+.card {
+  flex: 0 0 calc(25% - 20px);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 2%;
+  border-radius: 16px 16px 0px 0px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  /* margin: 10px; */
+  width: 25%;
+  border: 1px solid black;
 }
 
-.App-link {
-  color: #61dafb;
+.card img {
+  width: 100%;
+  height: 50%;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Add align-items property to vertically center the content */
+  margin-bottom: 10px;
+  /* border: 2px solid red; */
+  padding: 2px 2px;
+}
+
+.card .title h2 {
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  
+}
+
+.card .title p {
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.card h2 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.mainText {
+  font-size: 16px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Karla', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  /* border: 2px red solid; */
+  padding:10px;
+}
+
+.card .foot {
+  display: flex;
+  align-items: center;
+}
+
+.card button, .specials .title button  {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #495e57;
+  color: #ffffff;
+  font-family: "Karla", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  margin-right: 10px;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.specials .title button{
+  height: 64px;
+  width: auto;
+}
+
+.card button:hover, .specials .title button:hover {
+  background-color: #30413d;
+}
+
+.card .foot img {
+  width: 20px;
+  height: 20px;
 }
