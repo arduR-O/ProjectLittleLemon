@@ -1,4 +1,6 @@
 import image from "../assets/restauranfood.jpg";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
+
 
 const Hero = () => {
   return (
@@ -13,7 +15,7 @@ const Hero = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
             voluptatem sit aliquam quaerat cum. Laborum dolore
           </p>
-          <button>Reserve a Table</button>
+          <button aria-label="On Click"><Link to="/form">Reserve a Table</Link></button>
         </div>
 
       <img src={image} alt="heroImage" />

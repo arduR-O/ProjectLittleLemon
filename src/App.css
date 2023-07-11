@@ -408,3 +408,106 @@ footer a {
   display: flex;
   flex-direction: column;
 }
+
+/* booking form css */
+form {
+  display: grid;
+  gap: 20px;
+  width: auto;
+  padding:10px;
+  margin: 40px 126.5px;
+  margin-bottom: 50px;
+  text-align: left;
+  font-family: 'Karla', sans-serif;
+  border: 1px solid black;
+}
+
+label {
+  font-weight: bold;
+  text-align: left;
+}
+
+input[type="date"],
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 95%;
+  font-family: 'Karla', sans-serif;
+}
+
+input[type="submit"] {
+  padding: 12px 24px;
+  background-color: #f4ce14;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-family: 'Karla', sans-serif;
+}
+
+input[type="submit"]:hover {
+  background-color: #e6b706;
+}
+
+.booking-form input[type="submit"]:disabled,
+.booking-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* confirmed booking css */
+/* .confirmed-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  font-size: 24px;
+  text-align: center;
+  color: #28a745;
+}
+
+.confirmed-booking-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.confirmed-booking-text {
+  font-weight: bold;
+} */
+.confirmed-booking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.success-icon {
+  font-size: 80px;
+  color: #1abc9c;
+}
+
+.success-message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+}
+
+.confirmed-booking-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+.confirmed-booking-text {
+  font-weight: bold;
+}

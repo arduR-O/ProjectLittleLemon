@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Logo from "../assets/Logo.svg"
 
 const Header = () => {
@@ -5,10 +6,10 @@ const Header = () => {
         <header>
             <img src={Logo} alt="logo" />
             <ul>
-                <a href="/home">Home</a>
+                <a href="/">Home</a>
                 <a href="/about">About</a>
                 <a href="/menu">Menu</a>
-                <a href="/reservations">Reservations</a>
+                <Link to="/form" aria-label="On Click">Reservations</Link>
                 <a href="/orderOnline">Order Online</a>
                 <a href="/login">Login</a>
             </ul>
